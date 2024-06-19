@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b43a5c52a6987174ea87e8dc890f3271, type: 3}
+  m_Name: TestAssetConfig
+  m_EditorClassIdentifier: 
+  EnableAssetCheck: 0
+  EnableModelsConfig: 0
+  EnableMaterialConfig: 0
+  EnableLODPrefabCreate: 0
+  AssetRootPaht: Assets/___Meta48/Content/Arts/Test1/
+  pattern_Extensions_Mat: (.mat)$
+  pattern_Extensions_FBX: .(FBX|fbx)$
+  pattern_Extensions_Texture: (.tga|.png)$
+  pattern_Extensions_Prefab: .(prefab)$
+  patternNameMat: ^(Mat_).+(_LOD\d*|\d+)$
+  patternNameFBX: ^(Sm_|SM_).+(_LOD\d*|_collider)$
+  patternNameTexture: ^(T_).+_(D|E|M|N)$
+  patternNamePrefab: ^(P_)(.*)$|^(S[Mm])_.+(_LOD\d*|_collider)$
+  Extensions_Texture:
+  - .tga
+  - .png
+  Pattern_Mat:
+  - Mat_
+  Pattern_Mat_Tag:
+  - _LOD\d*
+  - \d+
+  Pattern_FBX:
+  - Sm_
+  - SM_
+  Pattern_FBX_Tag:
+  - _LOD\d*
+  - _collider
+  Pattern_Texture:
+  - T_
+  Pattern_Texture_Tag:
+  - D
+  - E
+  - M
+  - N
+  Pattern_Prefab:
+  - P_
+  Pattern_Prefab_Tag:
+  - .*
+  Pattern_Prefab1:
+  - S[Mm]
+  Pattern_Prefab_Tag1:
+  - _LOD\d*
+  - _collider
+  ClipMatPrefix: Mat_
+  ClipMatSuffix: _LOD
+  FormatTexturePrefix: T_
+  AutoGenerateUV2: LOD0
+  PrefabMeshesFolder: /TestMeshes
+  PrefabGenerateFolder: /TestPrefabs
+  PrefabColliderLayer: Physics_World_Default
